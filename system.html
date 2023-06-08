@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="system.css" />
+    <title>Solar System</title>
+  </head>
+  <body>
+    <h1 class="scale-text">Not to Scale *</h1>
+    <div class="speed-changes">
+      <h3 class="speed-text">Speed:</h3>
+      <button class="speed-buttons" onclick="changeSpeed(1)">1x</button>
+      <button class="speed-buttons" onclick="changeSpeed(10)">10x</button>
+      <button class="speed-buttons" onclick="changeSpeed(100)">100x</button>
+      <button class="speed-buttons" onclick="changeSpeed(500)">500x</button>
+    </div>
+    <div class="sun"></div>
+    <div class="container">
+      <div class="mercury-orbit orbit">
+        <!--Line above creates the actual orbit with dashed border-->
+        <div class="mercury-animation-container mercury-orbit orbit animation-container">
+          <!--Line above creates a duplicate of the orbit without the dashed border so
+            planet animates orbiting on border without the dashed border animating too-->
+          <div class="mercury"></div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="venus-orbit orbit">
+        <div class="venus-animation-container venus-orbit orbit animation-container">
+          <div class="venus"></div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="earth-orbit orbit">
+        <div class="earth-animation-container earth-orbit orbit animation-container">
+          <div class="earth"></div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="mars-orbit orbit">
+        <div class="mars-animation-container mars-orbit orbit animation-container">
+          <div class="mars"></div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="jupiter-orbit orbit">
+        <div class="jupiter-animation-container jupiter-orbit orbit animation-container">
+          <div class="jupiter"></div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="saturn-orbit orbit">
+        <div class="saturn-animation-container saturn-orbit orbit animation-container">
+          <div class="saturn"></div>
+        <div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="uranus-orbit orbit">
+        <div class="uranus-animation-container uranus-orbit orbit animation-container">
+          <div class="uranus"></div>
+        <div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="neptune-orbit orbit">
+        <div class="neptune-animation-container neptune-orbit orbit animation-container">
+          <div class="neptune"></div>
+        <div>
+      </div>
+    </div>
+
+    <script src="system.js"></script>
+  </body>
+</html>
