@@ -14,7 +14,57 @@ planetAnimationTimes = {
 function changeSpeed(speedMultiplier) {
     animationContainers.forEach((value) => {
         const planetName = value.children[0].classList[0];
-        const newAnimationDuration = planetAnimationTimes[planetName] / speedMultiplier;
+        let newAnimationDuration = planetAnimationTimes[planetName] / speedMultiplier;
+        if (speedMultiplier === 0) {
+            newAnimationDuration = 0
+        }
         value.style.animationDuration = `${newAnimationDuration}s`;
     });
 }
+
+// the sun is part of planets as well
+const planets = document.querySelectorAll(".balls");
+let isMouseOver = false;
+
+planets.forEach((planet) => {
+    planet.addEventListener("mouseover", () => displayText(planet));
+    planet.addEventListener("mouseout", () => {isMouseOver = false});
+});
+
+function displayText(planetElement) {
+    const planetName = planetElement.classList[0];
+    const planetDescription = document.querySelector(`.${planetName}-description`);
+    planetDescription.style.opacity = 1;
+    isMouseOver = true;
+
+    document.addEventListener("mousemove", hideText);
+
+    function hideText() {
+        if (!isMouseOver) {
+            const planetDescription = document.querySelector(`.${planetName}-description`);
+            planetDescription.style.opacity = 0;
+
+            document.removeEventListener("mousemove", hideText);
+        }
+    }
+}
+
+/*
+planetElement.addEventListener("mousemove", onMouseMove);
+
+function onMouseMove() {
+    let isMouseOver = false;
+
+    planetElement.addEventListener("mouseover", function flag() {
+        isMouseOver = true;
+
+        if (!isMouseOver) {
+            planetDescription.style.opacity = 0;
+            planetElement.removeEventListener("mousemove", onMouseMove);
+        }
+
+        planetElement.removeEventListener("mouseover", flag);
+        planetElement.removeEventListener("mousemove", onMouseMove);
+    });
+}
+*/

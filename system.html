@@ -6,71 +6,168 @@
   </head>
   <body>
     <h1 class="scale-text">Not to Scale *</h1>
+    <h4 class="hover-text">Hover over planets for description</h4>
     <div class="speed-changes">
       <h3 class="speed-text">Speed:</h3>
+      <button class="speed-buttons" onclick="changeSpeed(0)">0x</button>
       <button class="speed-buttons" onclick="changeSpeed(1)">1x</button>
       <button class="speed-buttons" onclick="changeSpeed(10)">10x</button>
       <button class="speed-buttons" onclick="changeSpeed(100)">100x</button>
       <button class="speed-buttons" onclick="changeSpeed(500)">500x</button>
     </div>
-    <div class="sun"></div>
-    <div class="container">
+
+    <div class="left-hand-descriptions">
+      <div class="description sun-description">
+        <h3 class="headings">The Sun</h3>
+        <p class="description-text">
+          The Sun is the star at the center of our Solar System. It is located
+          approximately 93 million miles from our planet and is the most
+          important source of energy for life on Earth.
+        </p>
+      </div>
+      <div class="description mercury-description">
+        <h3 class="headings">Mercury</h3>
+        <p class="description-text">
+          Mercury is the closest planet to the Sun and is the smallest planet
+          within the solar system. It is located approximately 36 million miles
+          from the Sun and features a rocky surface.
+        </p>
+      </div>
+      <div class="description venus-description">
+        <h3 class="headings">Venus</h3>
+        <p class="description-text">
+          Venus is the second planet from the Sun. It is about the same size as
+          Earth and is around 67 million miles from the sun. Venus is considered
+          to be the hottest planet in the solar system.
+        </p>
+      </div>
+      <div class="description earth-description">
+        <h3 class="headings">Earth</h3>
+        <p class="description-text">
+          Earth is the third planet from the Sun and is the planet we all live
+          on! Earth is the only known planet with life on it and has a surface
+          of 70% ocean and 30% rock.
+        </p>
+      </div>
+      <div class="description mars-description">
+        <h3 class="headings">Mars</h3>
+        <p class="description-text">
+          Mars is the fourth planet from the Sun. It is located about 155
+          million miles from the Sun and its volume is 15% that of Earth's. For
+          a long time it was rumored to have aliens living on it.
+        </p>
+      </div>
+    </div>
+
+    <div class="right-hand-descriptions">
+      <div class="description jupiter-description">
+        <h3 class="headings">Jupiter</h3>
+        <p class="description-text">
+          Jupiter is the fifth planet from the Sun. It is the largest of all the
+          planets and is located about 460 million miles from the Sun. It is the
+          first planet to be considered a gas giant.
+        </p>
+      </div>
+      <div class="description saturn-description">
+        <h3 class="headings">Saturn</h3>
+        <p class="description-text">
+          Saturn is the sixth planet from the Sun. Also a gas giant, Saturn is
+          the second largest planet and is located about 909 million miles from
+          the Sun. Saturn is most well known for its rings.
+        </p>
+      </div>
+      <div class="description uranus-description">
+        <h3 class="headings">Uranus</h3>
+        <p class="description-text">
+          Uranus is the seventh planet from the Sun at a distance of about 1.8
+          billion miles. It is the third biggest planet and features a beautiful
+          blue hue due to its methane atmosphere.
+        </p>
+      </div>
+      <div class="description neptune-description">
+        <h3 class="headings">Neptune</h3>
+        <p class="description-text">
+          Neptune is the eigth and final planet from the sun. Holding the spot
+          of fourth biggest planet, it is located about 2.8 billion miles from
+          the Sun and takes 165 Earth years to complete one orbit.
+        </p>
+      </div>
+    </div>
+
+    <div class="sun balls"></div>
+    <div class="container neptune-container">
+      <div class="neptune-orbit orbit">
+        <div
+          class="neptune-animation-container neptune-orbit orbit animation-container"
+        >
+          <div class="neptune balls"></div>
+        </div>
+      </div>
+    </div>
+    <div class="container uranus-container">
+      <div class="uranus-orbit orbit">
+        <div
+          class="uranus-animation-container uranus-orbit orbit animation-container"
+        >
+          <div class="uranus balls"></div>
+        </div>
+      </div>
+    </div>
+    <div class="container saturn-container">
+      <div class="saturn-orbit orbit">
+        <div
+          class="saturn-animation-container saturn-orbit orbit animation-container"
+        >
+          <div class="saturn balls"></div>
+        </div>
+      </div>
+    </div>
+    <div class="container jupiter-container">
+      <div class="jupiter-orbit orbit">
+        <div
+          class="jupiter-animation-container jupiter-orbit orbit animation-container"
+        >
+          <div class="jupiter balls"></div>
+        </div>
+      </div>
+    </div>
+    <div class="container mars-container">
+      <div class="mars-orbit orbit">
+        <div
+          class="mars-animation-container mars-orbit orbit animation-container"
+        >
+          <div class="mars balls"></div>
+        </div>
+      </div>
+    </div>
+    <div class="container earth-container">
+      <div class="earth-orbit orbit">
+        <div
+          class="earth-animation-container earth-orbit orbit animation-container"
+        >
+          <div class="earth balls"></div>
+        </div>
+      </div>
+    </div>
+    <div class="container venus-container">
+      <div class="venus-orbit orbit">
+        <div
+          class="venus-animation-container venus-orbit orbit animation-container"
+        >
+          <div class="venus balls"></div>
+        </div>
+      </div>
+    </div>
+    <div class="container mercury-container">
       <div class="mercury-orbit orbit">
         <!--Line above creates the actual orbit with dashed border-->
-        <div class="mercury-animation-container mercury-orbit orbit animation-container">
+        <div
+          class="mercury-animation-container mercury-orbit orbit animation-container"
+        >
           <!--Line above creates a duplicate of the orbit without the dashed border so
             planet animates orbiting on border without the dashed border animating too-->
-          <div class="mercury"></div>
+          <div class="mercury balls"></div>
         </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="venus-orbit orbit">
-        <div class="venus-animation-container venus-orbit orbit animation-container">
-          <div class="venus"></div>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="earth-orbit orbit">
-        <div class="earth-animation-container earth-orbit orbit animation-container">
-          <div class="earth"></div>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="mars-orbit orbit">
-        <div class="mars-animation-container mars-orbit orbit animation-container">
-          <div class="mars"></div>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="jupiter-orbit orbit">
-        <div class="jupiter-animation-container jupiter-orbit orbit animation-container">
-          <div class="jupiter"></div>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="saturn-orbit orbit">
-        <div class="saturn-animation-container saturn-orbit orbit animation-container">
-          <div class="saturn"></div>
-        <div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="uranus-orbit orbit">
-        <div class="uranus-animation-container uranus-orbit orbit animation-container">
-          <div class="uranus"></div>
-        <div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="neptune-orbit orbit">
-        <div class="neptune-animation-container neptune-orbit orbit animation-container">
-          <div class="neptune"></div>
-        <div>
       </div>
     </div>
 
